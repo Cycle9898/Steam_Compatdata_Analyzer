@@ -24,8 +24,8 @@ for DIR in $(/usr/bin/ls -d ${PATH}*/); do
 
     if [ -z "$GAME_NAME" ]
     then
-        GAME_NAME='Unknown Game ID'
+        echo "App ID: '$DIR_NAME' does not correspond to any Steam game"
+    else
+        echo "App ID: '$DIR_NAME' corresponds to the Steam game $GAME_NAME"
     fi
-
-    echo "App ID: '$DIR_NAME' corresponds to the Steam game $GAME_NAME"
 done
