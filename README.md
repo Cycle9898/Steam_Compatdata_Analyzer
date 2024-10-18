@@ -16,6 +16,18 @@ If you want to clean up a bit, you need to know which game ID corresponds to whi
 
 This bash script will retrieve all folder names inside the compatdata folder and then display the corresponding game name using the Steam API.
 
+## Dependencies
+
+This script need the following packages to work properly:
+
+-   coreutils (typically pre-installed on most Linux distributions)
+
+-   curl
+
+-   jq
+
+Use your favorite package manager to install the missing ones if needed.
+
 ## Usage
 
 After downloading the script, run this command in the folder where it is located: `./compatdata_analyzer.sh <compatdata folder path>`.
