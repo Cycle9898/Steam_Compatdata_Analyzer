@@ -8,13 +8,13 @@ More infos about Proton [here](https://github.com/ValveSoftware/Proton).
 
 Proton will create a prefix per game. A prefix is a folder, named according to the Steam app ID, that contains all Proton/Wine configurations as well as all Windows elements that Proton/Wine uses.
 
-These prefixes are stored in the Compatdata folder, located in `/home/$USER/.steam/steam/steamapps/compatdata/`.
+These prefixes are stored in the 'compatdata' folder, located in `/home/$USER/.steam/steam/steamapps/compatdata/`.
 
 When you uninstall a game on the Steam client, the prefix will not necessarily be deleted.
 
 If you want to clean up a bit, you need to know which game ID corresponds to which game.
 
-This bash script will retrieve all folder names inside the compatdata folder and then display the corresponding game name using the Steam API.
+This bash script will retrieve all folder names inside the 'compatdata' folder and then display the corresponding game/tool name using the Steam API.
 
 ## Dependencies
 
@@ -26,7 +26,7 @@ This script need the following packages to work properly:
 
 -   jq
 
-Use your favorite package manager to install the missing ones if needed.
+Use your favorite package manager to install the missing ones.
 
 ## Usage
 
@@ -38,4 +38,4 @@ Exemple:
 ./compatdata_analyzer.sh /home/deck/.steam/steam/steamapps/compatdata/
 ```
 
-It will output `App ID: '$APP_ID' corresponds to the Steam game "$GAME_NAME"` or `App ID: '$APP_ID' does not correspond to any Steam game` if it is not found in the Steam API response.
+It will output `App ID: <app ID> corresponds to the Steam game <Name of the game>`, `App ID: <app ID> corresponds to the Steam tool <Name of the tool>` or `App ID: <app ID> does not correspond to any Steam app` if it is not found in the Steam API response, for each directory found in the 'compatdata' folder.
