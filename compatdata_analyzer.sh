@@ -29,9 +29,9 @@ for DIR in $(/usr/bin/ls -d ${PATH}*/); do
 
         if [ -z "$PROTON_NAME" ]
         then
-        echo "App ID: '$DIR_NAME' does not correspond to any Steam app"
+            echo "App ID: '$DIR_NAME' does not correspond to any Steam app"
         else
-        echo "App ID: '$DIR_NAME' corresponds to the Steam tool $PROTON_NAME"
+            echo "App ID: '$DIR_NAME' corresponds to the Steam tool $PROTON_NAME"
         fi
     else
         echo "App ID: '$DIR_NAME' corresponds to the Steam game $GAME_NAME"
